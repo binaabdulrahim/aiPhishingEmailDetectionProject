@@ -1,5 +1,3 @@
-aiPhishingEmailProject
-
 # AI Phishing Email Tool
 
 ## Description
