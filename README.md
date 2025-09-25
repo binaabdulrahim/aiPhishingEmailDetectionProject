@@ -1,38 +1,50 @@
-# Project Name
+# AI Phishing Email Detection 
 
 ## Description
-A brief overview of what the project does and its purpose.
+Detect phishing emails using classical ML and lightweight NLP embeddings using the dataset from Kaggle. 
 
 ## Features
-- Feature 1
-- Feature 2
-- Feature 3
+- End-to-end pipeline: ML is trained on the dataset from Kaggle, evaluates phishing email vs legit email, and saves artifacts. 
+
+- Reproducible experiments in Jupyter notebooks under notebooks/
+
+- Model artifacts saved to models/ and metrics/plots to results/.
+
+- Configurable to work with your own labeled email data (CSV).
 
 ## Installation
-```bash
-# Clone the repository
-git clone https://github.com/your-username/repository-name.git
+git clone https://github.com/binaabdulrahim/aiPhishingEmailDetectionProject.git
+cd aiPhishingEmailDetectionProject
 
-# Navigate into the project directory
-cd repository-name
+# Python 3.10+ recommended
+python -m venv .venv
 
-# Install dependencies
-npm install  # or pip install -r requirements.txt
+# macOS/Linux
+source .venv/bin/activate
+
+# Windows (PowerShell)
+.venv\Scripts\Activate.ps1
+
+pip install --upgrade pip
+pip install -r requirements.txt
+
 ```
-
 ## Usage
 ```bash
 # Run the project
 npm start  # or python main.py
 ```
+python -m pip install jupyter
+jupyter lab   # or: jupyter notebook
 
 ## Configuration
-Describe any environment variables or configuration settings needed.
+Input CSV columns: text, label
 
-## Contributing
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature-branch`)
-3. Commit your changes (`git commit -m 'Add new feature'`)
-4. Push to the branch (`git push origin feature-branch`)
-5. Open a Pull Request
+Vectorization: TF-IDF (word/char n-grams) or embeddings (optional)
+
+Model: Start with Logistic Regression/SVM baseline; compare others.
+
+Reproducibility: set random_state in splits/models.
+
+
 
